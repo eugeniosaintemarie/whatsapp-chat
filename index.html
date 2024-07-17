@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp chat</title>
+    <script>
+      function abrirChatWhatsApp() {
+        const numeroTelefono = document.getElementById("numeroTelefono").value;
+        if (numeroTelefono) {
+          const link = `https://wa.me/${numeroTelefono}`;
+          window.open(link, "_blank");
+        } else {
+          alert("Número");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="numeroTelefono" placeholder="Número" />
+      <button onclick="abrirChatWhatsApp()">Chat</button>
+    </div>
+  </body>
+</html>
